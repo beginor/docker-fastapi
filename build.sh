@@ -1,2 +1,6 @@
 #!/bin/bash
-docker build --no-cache --rm -t beginor/fastapi:0.68.1 .
+docker buildx build \
+  --platform linux/amd64 \
+  -t beginor/fastapi:0.77.1 \
+  --output type=image \
+  .
